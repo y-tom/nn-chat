@@ -1,0 +1,13 @@
+{
+  "name": "nn-chat",
+  "version": "1.0.0",
+  "description": "NNチャット",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "pug": "3.0.2"
+  }
+}
