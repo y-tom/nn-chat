@@ -11,7 +11,7 @@ html(lang="ja")
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css")
     link(rel="stylesheet" href="style.css")
     title NNチャット
-  body.container.overflow-scroll
+  body.container.overflow-scroll(data-bs-theme=currentTheme)
     nav.navbar.fixed-top.bg-primary
       div.container-fluid
         h1.text-light.navbar-brand.mx-auto NNチャット
@@ -21,6 +21,8 @@ html(lang="ja")
             i.bi-gear-fill.ms-1
           ul.dropdown-menu.dropdown-menu-end(aria-labelledby="menu")
             li
+              - const changeThemeText = (currentTheme === 'light' ? 'ダークモードに切り替え' : 'ライトモードに切り替え');
+              a.dropdown-item(href="/changeTheme") #{changeThemeText}
               a.dropdown-item(href="/logout") ログアウト
     each post in posts
       - const cardClass = (user === post.postedBy ? 'card my-3 border-primary' : 'card my-3')
