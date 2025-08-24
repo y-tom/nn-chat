@@ -34,7 +34,7 @@ html(lang="ja")
                 i.bi-patch-check-fill.ms-1
             - const tooltipTitle = `<small>${post.absoluteCreatedAt}</small>`
             small.card-text.float-end(data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" title=tooltipTitle) #{post.relativeCreatedAt}
-          p.card-text.lead!= post.content
+          p.card-text.lead #{post.content}
         - const isDeletable = (user === post.postedBy || user === 'admin')
         if isDeletable
           div.card-footer.d-flex.justify-content-end

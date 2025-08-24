@@ -5,3 +5,7 @@ body.container {
 :root {
   scroll-behavior: auto;
 }
+p.card-text {
+  white-space: pre-wrap;
+  word-break: break-all;
+}

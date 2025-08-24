@@ -20,5 +20,13 @@ services:
     volumes:
       - ../nn-chat-db:/var/lib/postgresql/data
 
+  password-challenger:
+    build: .
+    tty: true
+    volumes:
+      - ../password-challenger:/app
+    depends_on:
+      - app
+
 volumes:
   node_modules:
