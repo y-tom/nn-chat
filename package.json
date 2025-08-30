@@ -15,7 +15,9 @@
     "prisma": "5.13.0",
     "pug": "3.0.2"
   },
-    "engines":{
-      "node":">=20"
-    }
+  "_comments":[
+    "ダミーキー",
+    "Renderフリープランでnodeのバージョンエラーが出たため以下を削除",
+    "engines{node:>=20}"]
 }
+
